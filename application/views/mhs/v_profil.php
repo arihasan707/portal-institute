@@ -70,7 +70,7 @@
 
                             <li class="nav-item">
                                 <button class="nav-link" data-bs-toggle="tab"
-                                    data-bs-target="#profile-change-password">Ganti Password</button>
+                                    data-bs-target="#profile-change-password">Edit Password</button>
                             </li>
 
                         </ul>
@@ -205,7 +205,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row mb-3">
+                                    <div class="row mb-5">
                                         <label class="col-md-4 col-lg-3 col-form-label">No.
                                             Handphone</label>
                                         <div class="col-md-8 col-lg-9">
@@ -213,91 +213,42 @@
                                         </div>
                                     </div>
 
-                                    <div class="text-center">
-                                        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                                    <div class="text-center d-flex justify-content-end">
+                                        <button type="submit" class="btn btn-primary">Simpan
+                                            Perubahan</button>
                                     </div>
                                 </form><!-- End Profile Edit Form -->
-
-                            </div>
-
-                            <div class="tab-pane fade pt-3" id="profile-settings">
-
-                                <!-- Settings Form -->
-                                <form>
-
-                                    <div class="row mb-3">
-                                        <label class="col-md-4 col-lg-3 col-form-label">Email
-                                            Notifications</label>
-                                        <div class="col-md-8 col-lg-9">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="changesMade"
-                                                    checked>
-                                                <label class="form-check-label">
-                                                    Changes made to your account
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="newProducts"
-                                                    checked>
-                                                <label class="form-check-label">
-                                                    Information on new products and services
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="proOffers">
-                                                <label class="form-check-label">
-                                                    Marketing and promo offers
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="securityNotify"
-                                                    checked disabled>
-                                                <label class="form-check-label">
-                                                    Security alerts
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="text-center">
-                                        <button type="submit" class="btn btn-primary">Save Changes</button>
-                                    </div>
-                                </form><!-- End settings Form -->
 
                             </div>
 
                             <div class="tab-pane fade pt-3" id="profile-change-password">
                                 <!-- Change Password Form -->
                                 <form>
-
                                     <div class="row mb-3">
-                                        <label class="col-md-4 col-lg-3 col-form-label">Current
+                                        <label class="col-md-4 col-lg-3 col-form-label">Old
                                             Password</label>
                                         <div class="col-md-8 col-lg-9">
                                             <input name="password" type="password" class="form-control"
                                                 id="currentPassword">
                                         </div>
                                     </div>
-
                                     <div class="row mb-3">
                                         <label class="col-md-4 col-lg-3 col-form-label">New
                                             Password</label>
                                         <div class="col-md-8 col-lg-9">
-                                            <input name="newpassword" type="password" class="form-control"
-                                                id="newPassword">
+                                            <input name="newpassword" type="password" class="form-control">
                                         </div>
                                     </div>
-                                    <div class="row mb-3">
+                                    <div class="row mb-4">
                                         <label class="col-md-4 col-lg-3 col-form-label">Re-enter New
                                             Password</label>
-                                        <div class="col-md-8 col-lg-9">
-                                            <input name="renewpassword" type="password" class="form-control"
-                                                id="renewPassword">
+                                        <div class="col-md-8 col-lg-9 mt-2">
+                                            <input name="renewpassword" type="password" class="form-control">
                                         </div>
                                     </div>
 
-                                    <div class="text-center">
-                                        <button type="submit" class="btn btn-primary">Change Password</button>
+                                    <div class="text-center d-flex justify-content-end">
+                                        <button type="submit" class="btn btn-primary">Ganti Password</button>
                                     </div>
                                 </form><!-- End Change Password Form -->
 

@@ -12,11 +12,13 @@ class Login extends CI_Controller
 
     public function Index()
     {
-        $this->load->view('mhs/v_login');
+        $data['title'] = "Login - Portal DH Institute";
+        $this->load->view('mhs/v_login',$data);
     }
     public function dosen()
     {
-        $this->load->view('dosen/v_login');
+        $data['title'] = "Login - Portal DH Institute";
+        $this->load->view('dosen/v_login',$data);
     }
 
     public function logproses()
@@ -36,11 +38,11 @@ class Login extends CI_Controller
                 $this->session->set_userdata($data);
                  redirect('portal_mahasiswa');
             } else {
-                $this->session->set_flashdata('alert', '<strong>Afwan</strong> username atau password salah');
+                $this->session->set_flashdata('alert', '<span class="notif"><strong>Maaf..</strong> username atau password salah</span>');
                 redirect('login');
             }
         } else {
-            $this->session->set_flashdata('warn', '<strong>Afwan</strong> username tidak terdaftar');
+            $this->session->set_flashdata('warn', '<span class="notif"><strong>Maaf..</strong> username tidak terdaftar</span>');
             redirect('login');
         }
     }
@@ -66,11 +68,11 @@ class Login extends CI_Controller
                     redirect('portal_dosen');
                 }
             } else {
-                $this->session->set_flashdata('alert', '<strong>Afwan</strong> username atau password salah');
+                $this->session->set_flashdata('alert', '<span class="notif"><strong>Maaf..</strong> username atau password salah</span>');
                 redirect('login/dosen');
             }
         } else {
-            $this->session->set_flashdata('warn', '<strong>Afwan</strong> username tidak terdaftar');
+            $this->session->set_flashdata('warn', '<span class="notif"><strong>Maaf..</strong> username tidak terdaftar</span>');
             redirect('login/dosen');
         }
     }

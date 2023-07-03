@@ -131,7 +131,7 @@
                                 <form action="<?= base_url('portal_mahasiswa/edit_profil/'. $mhs->id)?>" method="POST"
                                     enctype="multipart/form-data">
                                     <div class="row mb-3">
-                                        <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile
+                                        <label class="col-md-4 col-lg-3 col-form-label">Profile
                                             Image</label>
                                         <div class="col-md-8 col-lg-9">
                                             <img src="
@@ -149,7 +149,7 @@
                                     </div>
 
                                     <div class="row mb-3">
-                                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Nama
+                                        <label class="col-md-4 col-lg-3 col-form-label">Nama
                                             Lengkap</label>
                                         <div class="col-md-8 col-lg-9">
                                             <input name="nama" type="text" class="form-control"
@@ -158,7 +158,7 @@
                                     </div>
 
                                     <div class="row mb-3">
-                                        <label for="company" class="col-md-4 col-lg-3 col-form-label">Tempat
+                                        <label class="col-md-4 col-lg-3 col-form-label">Tempat
                                             Lahir</label>
                                         <div class="col-md-8 col-lg-9">
                                             <input name="tmp_lahir" type="text" class="form-control"
@@ -167,15 +167,17 @@
                                     </div>
 
                                     <div class="row mb-3">
-                                        <label for="Job" class="col-md-4 col-lg-3 col-form-label">Tanggal Lahir</label>
-                                        <div class="col-md-8 col-lg-9">
-                                            <input name="tgl_lahir" type="text" class="form-control" id="datepicker"
-                                                value="<?=$mhs->tgl_lahir;?>">
+                                        <label class="col-md-4 col-lg-3 col-form-label">Tanggal
+                                            Lahir</label>
+                                        <div class="input-group">
+                                            <input type="text" name="tgl_lahir" class="form-control" id="date"
+                                                value="<?=$mhs->tgl_lahir;?>" required>
+                                            <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
                                         </div>
                                     </div>
 
                                     <div class="row mb-3">
-                                        <label for="Country" class="col-md-4 col-lg-3 col-form-label">Jenis
+                                        <label class="col-md-4 col-lg-3 col-form-label">Jenis
                                             Kelamin</label>
                                         <div class="col-md-8 col-lg-9">
                                             <select class="form-select" name="jkl" aria-label="Default select example"
@@ -188,7 +190,7 @@
                                     </div>
 
                                     <div class="row mb-3">
-                                        <label for="Address" class="col-md-4 col-lg-3 col-form-label">Alamat</label>
+                                        <label class="col-md-4 col-lg-3 col-form-label">Alamat</label>
                                         <div class="col-md-8 col-lg-9">
                                             <input name="alamat" type="text" class="form-control"
                                                 value="<?=$mhs->alamat;?>">
@@ -196,7 +198,7 @@
                                     </div>
 
                                     <div class="row mb-3">
-                                        <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Email</label>
+                                        <label class="col-md-4 col-lg-3 col-form-label">Email</label>
                                         <div class="col-md-8 col-lg-9">
                                             <input name="email" type="email" class="form-control"
                                                 value="<?=$mhs->email;?>">
@@ -204,7 +206,7 @@
                                     </div>
 
                                     <div class="row mb-3">
-                                        <label for="Email" class="col-md-4 col-lg-3 col-form-label">No.
+                                        <label class="col-md-4 col-lg-3 col-form-label">No.
                                             Handphone</label>
                                         <div class="col-md-8 col-lg-9">
                                             <input name="hp" class="form-control" value="<?=$mhs->no_hp?>">
@@ -224,33 +226,33 @@
                                 <form>
 
                                     <div class="row mb-3">
-                                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Email
+                                        <label class="col-md-4 col-lg-3 col-form-label">Email
                                             Notifications</label>
                                         <div class="col-md-8 col-lg-9">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="changesMade"
                                                     checked>
-                                                <label class="form-check-label" for="changesMade">
+                                                <label class="form-check-label">
                                                     Changes made to your account
                                                 </label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="newProducts"
                                                     checked>
-                                                <label class="form-check-label" for="newProducts">
+                                                <label class="form-check-label">
                                                     Information on new products and services
                                                 </label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="proOffers">
-                                                <label class="form-check-label" for="proOffers">
+                                                <label class="form-check-label">
                                                     Marketing and promo offers
                                                 </label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="securityNotify"
                                                     checked disabled>
-                                                <label class="form-check-label" for="securityNotify">
+                                                <label class="form-check-label">
                                                     Security alerts
                                                 </label>
                                             </div>
@@ -269,7 +271,7 @@
                                 <form>
 
                                     <div class="row mb-3">
-                                        <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current
+                                        <label class="col-md-4 col-lg-3 col-form-label">Current
                                             Password</label>
                                         <div class="col-md-8 col-lg-9">
                                             <input name="password" type="password" class="form-control"
@@ -278,16 +280,15 @@
                                     </div>
 
                                     <div class="row mb-3">
-                                        <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">New
+                                        <label class="col-md-4 col-lg-3 col-form-label">New
                                             Password</label>
                                         <div class="col-md-8 col-lg-9">
                                             <input name="newpassword" type="password" class="form-control"
                                                 id="newPassword">
                                         </div>
                                     </div>
-
                                     <div class="row mb-3">
-                                        <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Re-enter New
+                                        <label class="col-md-4 col-lg-3 col-form-label">Re-enter New
                                             Password</label>
                                         <div class="col-md-8 col-lg-9">
                                             <input name="renewpassword" type="password" class="form-control"

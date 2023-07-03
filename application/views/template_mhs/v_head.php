@@ -32,6 +32,9 @@
     <link href="<?= base_url() ?>assets/front/css/style.css" rel="stylesheet">
     <link href="<?= base_url() ?>assets/front/css/responsive.css" rel="stylesheet">
 
+    <!-- datepicker -->
+    <link href="<?= base_url() ?>assets/front/vendor/datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+
 
 
     <!-- =======================================================

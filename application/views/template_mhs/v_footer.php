@@ -5,9 +5,13 @@
      </div>
  </footer><!-- End Footer -->
 
- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+ <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+         class="bi bi-arrow-up-short"></i></a>
 
  <!-- Vendor JS Files -->
+
+
+ <script src="<?= base_url() ?>assets/front/js/jquery.js"></script>
  <script src="<?= base_url() ?>assets/front/vendor/apexcharts/apexcharts.min.js"></script>
  <script src="<?= base_url() ?>assets/front/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
  <script src="<?= base_url() ?>assets/front/vendor/chart.js/chart.umd.js"></script>
@@ -19,6 +23,16 @@
 
  <!-- Template Main JS File -->
  <script src="<?= base_url() ?>assets/front/js/main.js"></script>
+
+ <!-- datepicker -->
+ <script src="<?= base_url() ?>assets/front/vendor/datepicker/js/bootstrap-datepicker.min.js"></script>
+
+ <script>
+$('#date').datepicker({
+    format: "dd/mm/yyyy"
+});
+ </script>
+
 
  </body>
 

@@ -8,7 +8,6 @@ class App extends CI_Model
     {
         $this->db->from($table);
         $this->db->where($where);
-        $this->db->order_by('id', 'DESC');
         return $this->db->get();
     }
     

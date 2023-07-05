@@ -232,14 +232,14 @@
                                         <label class="col-md-4 col-lg-3 col-form-label">
                                             Password Lama</label>
                                         <div class="col-md-8 col-lg-9">
-                                            <input name="pass_lama" type="password" class="form-control">
+                                            <input name="pass_lama" type="password" class="form-control" required>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <label class="col-md-4 col-lg-3 col-form-label">
                                             Password Baru</label>
                                         <div class="col-md-8 col-lg-9">
-                                            <input name="pass_baru" type="password" class="form-control">
+                                            <input name="pass_baru" type="password" class="form-control" required>
                                         </div>
                                     </div>
                                     <div class="text-center d-flex justify-content-end">

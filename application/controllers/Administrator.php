@@ -130,9 +130,12 @@ class Administrator extends CI_Controller
     
     public function hapus_mhs($id)
 	{
+        $foto = $this->app->get_where('tbl_profil_mhs', ['id_users'=> $id])->row_array();
+        $path = './assets/front/upload/'. $foto['foto'];
+        unlink($path);
+        $this->app->delete('tbl_profil_mhs',['id_users'=>$id]);
 		$this->app->delete('tbl_mhs',['id'=>$id]);
 		$this->app->delete('tbl_khs',['id_users'=>$id]);
-		$this->app->delete('tbl_profil_mhs',['id_users'=>$id]);
 		$this->session->set_flashdata('sukses_hapus', 'akses login telah di hapus ');
 		redirect('administrator/akses_mhs');
 	}

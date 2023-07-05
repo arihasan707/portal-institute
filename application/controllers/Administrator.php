@@ -43,7 +43,7 @@ class Administrator extends CI_Controller
         $data = [
             'title' => 'Akses Login Mahasiswa',
             'login' => $this->app->get_tahun_angkatan('tbl_mhs'),
-            'angkatan' => $this->app->get_all('tbl_angkatan')
+            'angkatan' => $this->app->get_all('tbl_angkatan')->result()
         ];
         $this->load->view('template_admin/v_head', $title);
         $this->load->view('template_admin/v_header');
@@ -65,7 +65,7 @@ class Administrator extends CI_Controller
             'foto' => '-',
             'tmp_lahir' => '-',
             'tgl_lahir' => '-',
-            'jkl' => '',
+            'jkl' => '-',
             'alamat'=> '-',
             'email'=>'-',
             'no_hp'=>'-'
@@ -132,7 +132,7 @@ class Administrator extends CI_Controller
 	{
 		$this->app->delete('tbl_mhs',['id'=>$id]);
 		$this->app->delete('tbl_khs',['id_users'=>$id]);
-		$this->app->delete('tbl_profil_mhs',['id'=>$id]);
+		$this->app->delete('tbl_profil_mhs',['id_users'=>$id]);
 		$this->session->set_flashdata('sukses_hapus', 'akses login telah di hapus ');
 		redirect('administrator/akses_mhs');
 	}
@@ -148,6 +148,33 @@ class Administrator extends CI_Controller
 		$this->session->set_flashdata('sukses_hapus', 'akses login telah di hapus ');
 		redirect('administrator/akses_admin');
 	}
+    
+    public function tahun_semester(){
+        $data['title'] = 'Tahun Semester';
+        $data['smstr'] = $this->app->get_all('tbl_semester');
+        $this->load->view('template_admin/v_head', $data);
+        $this->load->view('template_admin/v_header');
+        $this->load->view('template_admin/v_sidebar');
+        $this->load->view('admin/v_tahun_semester',$data);
+        $this->load->view('template_admin/v_footer');
+    }
+    
+    public function tambah_smstr(){
+        $smstr = $this->input->post('smstr');
+        
+        $data = [
+          'semester' => $smstr  
+        ];
+        $this->app->insert('tbl_semester',$data);
+        $this->session->set_flashdata('sukses_tambah', 'tahun semester telah di tambah');
+        redirect('administrator/tahun_semester');
+    }
+    
+    public function hapus_smstr($id){
+        $this->app->delete('tbl_semester',['id'=>$id]);
+		$this->session->set_flashdata('sukses_hapus', 'tahun semester telah di hapus');
+		redirect('administrator/tahun_semester');
+    }
 
     public function keluar()
     {

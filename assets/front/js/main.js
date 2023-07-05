@@ -347,3 +347,15 @@
 
 	
 })();
+
+const loading = $('.loading');
+
+function show(){
+	loading.css("display","block");
+}
+
+function hide(){
+	setTimeout(() => {
+		loading.css("display","none");
+	},500)
+}

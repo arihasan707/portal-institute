@@ -47,7 +47,7 @@ class Portal_mahasiswa extends CI_Controller
 		$data1['users'] = $this->app->get_profil('tbl_profil_mhs' ,['id_users'=>$p])->row();
 		
 		$title['title'] = 'Portal Mahasiswa';
-		$data['semester'] = $this->app->get_all('tbl_semester');
+		$data['semester'] = $this->app->get_smstr('tbl_semester');
 		$this->load->view('template_mhs/v_head', $title);
 		$this->load->view('template_mhs/v_header',$data1);
 		$this->load->view('template_mhs/v_sidebar');
@@ -164,6 +164,25 @@ class Portal_mahasiswa extends CI_Controller
 			$this->session->set_flashdata('sukses', 'Profil telah di perbaharui');
 			redirect('portal_mahasiswa/profil');
 		}
+	}
+	
+	public function edit_pass($id){
+		$pass_lama = $this->input->post('pass_lama');
+		$pass_baru = $this->input->post('pass_baru');
+		
+		$cek = $this->app->get_where('tbl_mhs',['id'=> $id])->row_array();
+		if (password_verify($pass_lama , $cek['pass'])){
+			$data = [
+			'pass' => password_hash($pass_baru, PASSWORD_DEFAULT)	
+			];
+			$this->app->update('tbl_mhs', $data , ['id'=>$id]);
+			$this->session->set_flashdata('sukses_pass' ,'sukses_edit');
+			redirect('portal_mahasiswa/profil');
+		}else{
+			$this->session->set_flashdata('gagal_pass', 'gagal_edit');
+			redirect('portal_mahasiswa/profil');
+		}
+		
 	}
 	
 	public function keluar()

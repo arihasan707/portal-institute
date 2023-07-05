@@ -11,17 +11,32 @@ class App extends CI_Model
         $this->db->order_by('id', 'DESC');
         return $this->db->get();
     }
+    
+    function get_where1($table, $where,$where1)
+    {
+        $this->db->from($table);
+        $this->db->where($where);
+        $this->db->where($where1);
+        return $this->db->get();
+    }
+    
     function get_all($table)
     {
         $this->db->from($table);
-        $this->db->order_by('id', 'desc');
+        return $this->db->get();
+    }
+    
+    function get_smstr($table)
+    {
+        $this->db->from($table);
+        $this->db->order_by('semester', 'desc');
         return $this->db->get();
     }
     
     function get_tahun_angkatan($table)
     {
         $this->db->from($table);
-        $this->db->join('tbl_angkatan','tbl_mhs.id_angkatan=tbl_angkatan.id');
+        $this->db->join('tbl_angkatan','tbl_mhs.id_angkatan=tbl_angkatan.id_angktn');
         $this->db->order_by('created_at', 'desc');
         return $this->db->get();
     }
@@ -100,6 +115,13 @@ class App extends CI_Model
     function delete($table, $where)
     {
         $this->db->where($where);
+        $this->db->delete($table);
+    }
+    
+    function delete_khs($table, $where)
+    {
+        $this->db->where($where);
+        $this->db->join('tbl_mhs','tbl_mhs.id=tbl_khs.id_users');
         $this->db->delete($table);
     }
     

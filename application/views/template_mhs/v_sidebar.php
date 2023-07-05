@@ -19,7 +19,7 @@
 
          <li class="nav-item">
              <a class="nav-link collapsed" href="<?= base_url('portal_mahasiswa/khs')?>">
-                 <i class="bi bi-person"></i>
+                 <i class="bi bi-receipt"></i>
                  <span>Kartu Hasil Studi</span>
              </a>
          </li><!-- End Profile Page Nav -->

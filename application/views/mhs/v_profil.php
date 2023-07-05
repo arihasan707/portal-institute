@@ -1,5 +1,9 @@
 <main id="main" class="main">
 
+    <div class="flash-profile-alert" data-flashdata="<?= $this->session->flashdata('alert');?>"></div>
+    <div class="flash-pass-success" data-flashdata="<?= $this->session->flashdata('sukses_pass');?>"></div>
+    <div class="flash-pass-failed" data-flashdata="<?= $this->session->flashdata('gagal_pass');?>"></div>
+
     <div class="pagetitle">
         <h1>Profile</h1>
         <nav>
@@ -223,42 +227,29 @@
 
                             <div class="tab-pane fade pt-3" id="profile-change-password">
                                 <!-- Change Password Form -->
-                                <form>
+                                <form action="<?= base_url('portal_mahasiswa/edit_pass/'. $mhs->id)?>" method="post">
                                     <div class="row mb-3">
-                                        <label class="col-md-4 col-lg-3 col-form-label">Old
-                                            Password</label>
+                                        <label class="col-md-4 col-lg-3 col-form-label">
+                                            Password Lama</label>
                                         <div class="col-md-8 col-lg-9">
-                                            <input name="password" type="password" class="form-control"
-                                                id="currentPassword">
+                                            <input name="pass_lama" type="password" class="form-control">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <label class="col-md-4 col-lg-3 col-form-label">New
-                                            Password</label>
+                                        <label class="col-md-4 col-lg-3 col-form-label">
+                                            Password Baru</label>
                                         <div class="col-md-8 col-lg-9">
-                                            <input name="newpassword" type="password" class="form-control">
+                                            <input name="pass_baru" type="password" class="form-control">
                                         </div>
                                     </div>
-                                    <div class="row mb-4">
-                                        <label class="col-md-4 col-lg-3 col-form-label">Re-enter New
-                                            Password</label>
-                                        <div class="col-md-8 col-lg-9 mt-2">
-                                            <input name="renewpassword" type="password" class="form-control">
-                                        </div>
-                                    </div>
-
                                     <div class="text-center d-flex justify-content-end">
                                         <button type="submit" class="btn btn-primary">Ganti Password</button>
                                     </div>
                                 </form><!-- End Change Password Form -->
-
                             </div>
-
                         </div><!-- End Bordered Tabs -->
-
                     </div>
                 </div>
-
             </div>
         </div>
     </section>

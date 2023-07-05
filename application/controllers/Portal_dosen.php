@@ -81,13 +81,21 @@ class Portal_dosen extends CI_Controller
     {    
         $title['title'] = 'Portal Dosen';
         $data['title1'] = 'Input Nilai';
-        $data['semester'] = $this->app->get_all('tbl_semester');
-        $data['k'] = $this->app->get_mhs_id('tbl_mhs', ['hak_akses' => 3] , ['username'=> $id])->row();
+        $data['semester'] = $this->app->get_smstr('tbl_semester');
+        $data['k'] = $this->app->get_mhs_id('tbl_mhs', ['hak_akses' => 3] , ['id'=> $id])->row();
         $this->load->view('template_dosen/v_head', $title);
         $this->load->view('template_dosen/v_header');
         $this->load->view('template_dosen/v_sidebar');
         $this->load->view('dosen/v_input', $data);
         $this->load->view('template_dosen/v_footer');
+    }
+    
+    public function hapus_nilai_mhs($id)
+    {
+        $this->app->delete_khs('tbl_khs',['id_users' => $id]);
+        $data = $this->app->get_where('tbl_mhs',['id'=> $id])->row();
+        $this->session->set_flashdata('sukses_', 'nilai KHS dengan nim <strong> ' . $data->username . '</strong> telah di hapus');
+        redirect('portal_dosen/input_nilai');
     }
 
     public function keluar()

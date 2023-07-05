@@ -39,14 +39,11 @@
                         <td><?= $m->username ?></td>
                         <td><?= $m->nama ?></td>
                         <td><?= $m->angkatan ?></td>
-                        <td> <a class="btn btn-primary btn-sm"
-                                href="<?= base_url('portal_dosen/input/'. $m->username)?>">Input
-                            </a>
-                            <a data-bs-toggle="modal" data-bs-target="#cek<?= $m->id ?>" class="btn btn-warning btn-sm"
-                                href="">Check
+                        <td> <a class="btn btn-primary btn-sm" href="<?= base_url('portal_dosen/input/'. $m->id)?>">Klik
+                                Input
                             </a>
                         </td>
-                        <td class="text-center"><a data-bs-toggle="modal" data-bs-target="#hapus" href=""
+                        <td class="text-center"><a data-bs-toggle="modal" data-bs-target="#hapus<?= $m->id?>" href=""
                                 class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></a>
                         </td>
                     </tr>
@@ -56,36 +53,25 @@
         </div>
     </div>
 
-    <!-- Modal check-->
-    <?php foreach ($mhs->result() as $m) : ?>
-    <div class="modal fade" id="cek<?=$m->id?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class=" modal-content">
+    <!-- modal hapus -->
+    <?php foreach ($mhs->result() as $m) { ?>
+    <div class="modal fade" id="hapus<?= $m->id; ?>" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" id="exampleModalLabel">Apakah anda yakin ingin menghapus semua nilai
+                        <strong><?= $m->nama?></strong>
+                    </h5>
                 </div>
-                <div class="modal-body modal-dialog-scrollable">
-                    <table id="inbox" class="ui celled table" style="width:100%; padding:0px;">
-                        <thead>
-                            <tr style=" background-color:#0d6efd; color:white;">
-                                <th>Nama</th>
-                                <?php foreach($semester->result() as $s ) :?>
-                                <th><?= $s->semester;?></th>
-                                <?php endforeach; ?>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <td><?=$mhs->row()->nama;?></td>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+                <form action="<?= base_url('portal_dosen/hapus_nilai_mhs/' . $m->id) ?>" method="POST">
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
+                        <button type="submit" class="btn btn-danger">Hapus</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    <?php endforeach; ?>
+    <?php } ?>
 </main>

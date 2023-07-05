@@ -92,8 +92,8 @@
                             <label for="exampleFormControlInput1" class="form-label bold">Tahun Angkatan</label>
                             <select class="form-select" name="angkatan" aria-label="Default select example" required>
                                 <option value="">-- Pilih Tahun Angkatan --</option>
-                                <?php foreach ($angkatan->result() as $a) { ?>
-                                <option value="<?= $a->id ?>"><?= $a->angkatan ?></option>
+                                <?php foreach ($angkatan as $a) { ?>
+                                <option value="<?= $a->id_angktn ?>"><?= $a->angkatan ?></option>
                                 <?php } ?>
                             </select>
                         </div>

@@ -52,24 +52,6 @@
                             </a>
                         </div>
                     </div><!-- End Revenue Card -->
-
-                    <div class="col-xxl-4 col-md-6 mb-3">
-                        <div class="card info-card bg-success-light revenue-card">
-                            <a href="<?= base_url('portal_dosen/daftar_mahasiswa') ?>">
-                                <div class="card-body1">
-                                    <div class="d-flex align-items-center">
-                                        <div
-                                            class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="bi bi-receipt"></i>
-                                        </div>
-                                        <div class="ps-3">
-                                            <span>daftar mahasiswa</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div><!-- End Revenue Card -->
                 </div>
             </div><!-- End Left side columns -->
 

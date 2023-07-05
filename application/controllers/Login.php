@@ -36,6 +36,7 @@ class Login extends CI_Controller
                     'hk' => $login['hak_akses']
                 ];
                 $this->session->set_userdata($data);
+                $this->session->set_flashdata('login', $data['nama']);
                  redirect('portal_mahasiswa');
             } else {
                 $this->session->set_flashdata('alert', '<span class="notif"><strong>Maaf..</strong> username atau password salah</span>');

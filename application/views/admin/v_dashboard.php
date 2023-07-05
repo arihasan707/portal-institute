@@ -71,6 +71,26 @@
                             </a>
                         </div>
                     </div><!-- End Revenue Card -->
+
+                    <!-- Sales Card -->
+                    <div class="col-xxl-4 col-md-6 mb-3">
+                        <div class="card info-card bg-success-light sales-card">
+                            <a href="<?= base_url('administrator/tahun_semester') ?>">
+                                <div class="card-body1">
+                                    <div class="d-flex align-items-center">
+                                        <div
+                                            class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <i class="bi bi-flag-fill"></i>
+                                        </div>
+                                        <div class="ps-3">
+                                            <span>Tahun Semester</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div><!-- End Sales Card -->
+
                 </div>
             </div><!-- End Left side columns -->
 

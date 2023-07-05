@@ -12,7 +12,15 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/front/login/css/iofrm-theme4.css">
 </head>
 
-<body>
+<body onload="hide()">
+    <div class="overlay loading">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <div class="form-body" class="container-fluid">
         <div class="row">
             <div class="img-holder">
@@ -30,16 +38,17 @@
                         <h3>Sistem Akademik DH Institute</h3>
                         <p>masukan username & password untuk login.</p>
                         <?php if ($this->session->flashdata('alert')) :?>
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            <?= $this->session->flashdata('alert') ?>
+                        <div class="alert alert-danger bg-danger text-light border-0 alert-dismissible fade show"
+                            role="alert">
+                            <?= $this->session->flashdata('alert');?>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <?php endif?>
                         <?php if ($this->session->flashdata('warn')) :?>
-                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            <?= $this->session->flashdata('warn') ?>
+                        <div class="alert alert-warning bg-warning border-0 alert-dismissible fade show" role="alert">
+                            <?= $this->session->flashdata('warn');?>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -54,11 +63,11 @@
                             <input class="form-control" type="text" name="username" placeholder="Username" required>
                             <input class="form-control" type="password" name="pass" placeholder="Password" required>
                             <div class="form-button">
-                                <button type="submit" class="ibtn">Login</button>
+                                <button type="submit" class="ibtn submit">Login</button>
                             </div>
                         </form>
                         <div class="other-links">
-                            <span>Follow up</span><a
+                            <span>Follow Up</span><a
                                 href="https://web.facebook.com/daarulhuffadz.indonesia">Facebook</a><a
                                 href="https://www.youtube.com/@DaarulHuffadzIndonesia">Youtube</a><a
                                 href="https://www.tiktok.com/@daarulhuffadz.indonesia?is_from_webapp=1&sender_device=pc">Tiktok</a>

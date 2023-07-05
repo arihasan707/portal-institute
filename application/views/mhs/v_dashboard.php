@@ -1,5 +1,7 @@
 <main id="main" class="main">
 
+    <div class="flash-login" data-flashdata="<?= $this->session->flashdata('login');?>"></div>
+
     <div class="pagetitle">
         <h1>Dashboard</h1>
         <nav>

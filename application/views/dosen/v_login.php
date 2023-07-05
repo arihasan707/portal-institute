@@ -12,7 +12,15 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/front/login/css/iofrm-theme4.css">
 </head>
 
-<body>
+<body onload="hide()">
+    <div class="overlay loading">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <div class="form-body" class="container-fluid">
         <div class="row">
             <div class="img-holder">
@@ -59,7 +67,7 @@
                             </div>
                         </form>
                         <div class="other-links">
-                            <span>Follow up</span><a
+                            <span>Follow Up</span><a
                                 href="https://web.facebook.com/daarulhuffadz.indonesia">Facebook</a><a
                                 href="https://www.youtube.com/@DaarulHuffadzIndonesia">Youtube</a><a
                                 href="https://www.tiktok.com/@daarulhuffadz.indonesia?is_from_webapp=1&sender_device=pc">Tiktok</a>

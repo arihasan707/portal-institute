@@ -11,7 +11,7 @@
 
 
  <!-- Vendor JS Files -->
- <script src="<?= base_url(); ?>assets/front/js/jquery.min.js"></script>
+ <script src="<?= base_url(); ?>assets/front/js/jquery.js"></script>
  <script src="<?= base_url() ?>assets/front/vendor/apexcharts/apexcharts.min.js"></script>
  <script type="text/javascript" src="<?= base_url(); ?>assets/front/vendor/DataTables/datatables.min.js"></script>
  <script src="<?= base_url() ?>assets/front/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

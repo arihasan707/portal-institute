@@ -301,7 +301,7 @@
 }
 
 /* responsive */
-@media screen and (min-width:375px) and (max-width:412px) {
+@media screen and (min-width:412px) and (max-width:440px) {
     .form-content h3 {
         font-size: 21px;
     }
@@ -311,6 +311,19 @@
     }
     .form-content .page-links a {
         font-size: 13.6px;
+    }
+}
+/* responsive */
+@media screen and (min-width:370px) and (max-width:411px) {
+    .form-content h3 {
+        font-size: 18.4px;
+    }
+    .form-content p{
+        text-align: center;
+        font-size: 12px;
+    }
+    .form-content .page-links a {
+        font-size: 11.5px;
     }
 }
 

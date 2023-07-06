@@ -24,6 +24,13 @@ class App extends CI_Model
         $this->db->from($table);
         return $this->db->get();
     }
+    function get_angktn($table)
+    {
+        $this->db->from($table);
+        $this->db->order_by('angkatan','desc');
+        return $this->db->get();
+    }    
+ 
     
     function get_smstr($table)
     {

@@ -43,7 +43,7 @@ class Administrator extends CI_Controller
         $data = [
             'title' => 'Akses Login Mahasiswa',
             'login' => $this->app->get_tahun_angkatan('tbl_mhs'),
-            'angkatan' => $this->app->get_all('tbl_angkatan')->result()
+            'angkatan' => $this->app->get_angktn('tbl_angkatan')->result()
         ];
         $this->load->view('template_admin/v_head', $title);
         $this->load->view('template_admin/v_header');

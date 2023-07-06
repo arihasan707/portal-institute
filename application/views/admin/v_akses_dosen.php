@@ -87,23 +87,20 @@
                         <div class="mb-2">
                             <label for="exampleFormControlInput1" class="form-label bold">Nama
                                 Lengkap<span>*</span></label>
-                            <input type="text" name="nama" class="form-control" id="exampleFormControlInput1"
+                            <input type="text" name="nama" class="form-control"
                                 placeholder="Masukan nama lengkap & gelar">
                         </div>
                         <div class="mb-2">
                             <label for="exampleFormControlInput1" class="form-label bold">Hak Akses</label>
-                            <input type="text" name="hk" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Dosen" disabled>
+                            <input type="text" name="hk" class="form-control" placeholder="Dosen" disabled>
                         </div>
                         <div class="mb-2">
                             <label for="exampleFormControlInput1" class="form-label bold">Username<span>*</span></label>
-                            <input type="text" name="username" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Masukan username">
+                            <input type="text" name="username" class="form-control" placeholder="Masukan username">
                         </div>
                         <div class="mb-2">
                             <label for="exampleFormControlInput1" class="form-label bold">Password<span>*</span></label>
-                            <input type="password" name="pass" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Masukan password">
+                            <input type="password" name="pass" class="form-control" placeholder="Masukan password">
                         </div>
                         <div class="form-text mb-4">
                             <b><i> Keterangan: <i></b><br><span>*</span>Wajib di isi.

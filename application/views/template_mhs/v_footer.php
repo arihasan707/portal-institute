@@ -40,6 +40,7 @@ $('#date').datepicker({
 
  <script>
 const flashProfile = $('.flash-profile-alert').data('flashdata');
+const flashProfileSuccess = $('.flash-profile-success').data('flashdata');
 const flashPassSuccess = $('.flash-pass-success').data('flashdata');
 const flashPassFailed = $('.flash-pass-failed').data('flashdata');
 const flashLogin = $('.flash-login').data('flashdata');
@@ -56,6 +57,14 @@ if (flashPassSuccess) {
     Swal.fire(
         'Yeah.. Alhamdulillah',
         'Password telah berhasil di ubah',
+        'success'
+    );
+}
+
+if (flashProfileSuccess) {
+    Swal.fire(
+        'Yeah.. Alhamdulillah',
+        'Profile telah berhasil di ubah',
         'success'
     );
 }
@@ -89,6 +98,16 @@ if (flashLogin) {
 }
  </script>
 
+ <script>
+$(() => {
+    const path = window.location.href;
+    $('ul li a').each(function() {
+        if (this.href == path) {
+            $(this).removeClass('collapsed');
+        }
+    })
+})
+ </script>
 
  </body>
 

@@ -35,6 +35,17 @@ $('#inbox').DataTable({
 });
  </script>
 
+ <script>
+$(() => {
+    const path = window.location.href;
+    $('ul li a').each(function() {
+        if (this.href == path) {
+            $(this).removeClass('collapsed');
+        }
+    })
+})
+ </script>
+
  <!-- Template Main JS File -->
  <script src="<?= base_url() ?>assets/front/js/main.js"></script>
  </body>

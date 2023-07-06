@@ -1,6 +1,7 @@
 <main id="main" class="main">
 
     <div class="flash-profile-alert" data-flashdata="<?= $this->session->flashdata('alert');?>"></div>
+    <div class="flash-profile-success" data-flashdata="<?= $this->session->flashdata('sukses');?>"></div>
     <div class="flash-pass-success" data-flashdata="<?= $this->session->flashdata('sukses_pass');?>"></div>
     <div class="flash-pass-failed" data-flashdata="<?= $this->session->flashdata('gagal_pass');?>"></div>
 
@@ -42,21 +43,6 @@
             </div>
 
             <div class="col-xl-8">
-                <div class="col-12">
-                    <?php if ($this->session->flashdata('alert')) { ?>
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        <strong> Gagal </strong><?= $this->session->flashdata('alert') ?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                    <?php }; ?>
-
-                    <?php if ($this->session->flashdata('sukses')) { ?>
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <strong> Berhasil </strong><?= $this->session->flashdata('sukses') ?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                    <?php }; ?>
-                </div>
                 <div class="card">
                     <div class="card-body pt-3">
                         <!-- Bordered Tabs -->

@@ -62,7 +62,7 @@ class Portal_mahasiswa extends CI_Controller
 		$mhs = $this->fungsi->users_id()->id;
 		$id = $this->input->post('semester');
 		$title['title'] = 'Portal Mahasiswa';
-		$data['semester'] = $this->app->get_all('tbl_semester');
+		$data['semester'] = $this->app->get_smstr('tbl_semester');
 		$data['khs'] = $this->app->get_khs('tbl_khs', ['id_users' => $mhs], ['id_semester' => $id])->row();
 		$this->load->view('template_mhs/v_head', $title);
 		$this->load->view('template_mhs/v_header',$data1);

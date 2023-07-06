@@ -57,7 +57,7 @@
                         <li>
                             <a class="dropdown-item d-flex align-items-center"
                                 href="<?= base_url('administrator/keluar') ?>">
-                                <i class="bi bi-question-circle"></i>
+                                <i class="bi bi-x-circle"></i>
                                 <span>Log Out</span>
                             </a>
                         </li>

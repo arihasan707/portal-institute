@@ -4,7 +4,7 @@
      <ul class="sidebar-nav" id="sidebar-nav">
 
          <li class="nav-item">
-             <a class="nav-link " href="<?= base_url('portal_dosen') ?>">
+             <a class="nav-link collapsed" href="<?= base_url('portal_dosen') ?>">
                  <i class="bi bi-grid"></i>
                  <span>Dashboard</span>
              </a>
@@ -18,7 +18,7 @@
          </li><!-- End Profile Page Nav -->
 
          <li class="nav-item">
-             <a class="nav-link collapsed" href="pages-faq.html">
+             <a class="nav-link collapsed" href=<?= base_url('portal_dosen/keluar')?>>
                  <i class="bi bi-x-circle"></i>
                  <span>Logout</span>
              </a>

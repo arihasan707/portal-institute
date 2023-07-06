@@ -80,13 +80,11 @@
                     <form action="<?php echo base_url('administrator/tambah_akses_mhs/') ?>" method="post">
                         <div class="mb-2">
                             <label for="exampleFormControlInput1" class="form-label bold">Nama<span>*</span></label>
-                            <input type="text" name="nama" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Masukan nama">
+                            <input type="text" name="nama" class="form-control" placeholder="Masukan nama">
                         </div>
                         <div class="mb-2">
                             <label for="exampleFormControlInput1" class="form-label bold">Title</label>
-                            <input type="text" name="jab" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Mahasiswa" disabled>
+                            <input type="text" name="jab" class="form-control" placeholder="Mahasiswa" disabled>
                         </div>
                         <div class="mb-2">
                             <label for="exampleFormControlInput1" class="form-label bold">Tahun Angkatan</label>
@@ -99,13 +97,11 @@
                         </div>
                         <div class="mb-2">
                             <label for="exampleFormControlInput1" class="form-label bold">Username<span>*</span></label>
-                            <input type="text" name="username" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Masukan username">
+                            <input type="text" name="username" class="form-control" placeholder="Masukan username">
                         </div>
                         <div class="mb-2">
                             <label for="exampleFormControlInput1" class="form-label bold">Password<span>*</span></label>
-                            <input type="password" name="pass" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Masukan password">
+                            <input type="password" name="pass" class="form-control" placeholder="Masukan password">
                         </div>
                         <div class="form-text mb-4">
                             <b><i> Keterangan: <i></b><br><span>*</span>Wajib di isi.

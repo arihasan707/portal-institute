@@ -4,7 +4,7 @@
      <ul class="sidebar-nav" id="sidebar-nav">
 
          <li class="nav-item">
-             <a class="nav-link " href="<?= base_url('administrator') ?>">
+             <a class="nav-link collapsed dashboard" href="<?= base_url('administrator') ?>">
                  <i class="bi bi-grid"></i>
                  <span>Dashboard</span>
              </a>
@@ -15,7 +15,7 @@
                  <i class="bi bi-menu-button-wide"></i><span>Akses Login</span><i
                      class="bi bi-chevron-down ms-auto"></i>
              </a>
-             <ul id="akses-login" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+             <ul id="akses-login" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                  <li class="nav-item">
                      <a class="nav-link collapsed" href="<?= base_url('administrator/akses_mhs')?>">
                          <i class="bi bi-circle"></i>

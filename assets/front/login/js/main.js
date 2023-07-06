@@ -9,7 +9,3 @@ function hide(){
 		loading.css("display","none");
 	},700)
 }
-
-$('.submit').onClick(()=>{
-    console.log('suskes');
-})

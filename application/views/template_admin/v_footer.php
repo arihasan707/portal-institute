@@ -27,8 +27,7 @@
 $(() => {
     const href = window.location.href;
     const path = location.pathname.split('/');
-    const url = location.origin + '/' + path[1] + '/' + path[2] + '/' + path[3];
-    const url_ = location.origin + '/' + path[1] + '/' + path[2];
+    const url = location.origin + '/' + path[1] + '/' + path[2];
     $('li.nav-item ul#akses-login li a').each(function() {
         if ($(this).attr('href').indexOf(url) !== -1) {
             $(this).removeClass('collapsed').parent().parent().removeClass('collapse').parent()

@@ -300,3 +300,13 @@
 	text-align: center;
 }
 
+/* responsive */
+@media screen and (min-width:412px) {
+    .form-item h3 {
+        font-size: .83em;
+    }
+    .form-content .page-links a {
+        font-size: 13.8px;
+    }
+}
+

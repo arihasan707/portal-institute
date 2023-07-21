@@ -34,7 +34,7 @@
                 <div class="form-content">
                     <div class="form-items">
                         <div class="logo d-flex justify-content-center mb-3">
-                            <img src="<?= base_url()?>assets/front/img/logo-mobile.png" width="150px">
+                            <img src="<?= base_url()?>assets/front/img/logo-mobile.png" width="160px">
                         </div>
                         <h3>Sistem Akademik DH Institute</h3>
                         <p>masukan username & password untuk login.</p>

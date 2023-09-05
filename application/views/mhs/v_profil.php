@@ -208,30 +208,6 @@
                                             Perubahan</button>
                                     </div>
                                 </form><!-- End Profile Edit Form -->
-
-                            </div>
-
-                            <div class="tab-pane fade pt-3" id="profile-change-password">
-                                <!-- Change Password Form -->
-                                <form action="<?= base_url('portal_mahasiswa/edit_pass/'. $mhs->id)?>" method="post">
-                                    <div class="row mb-3">
-                                        <label class="col-md-4 col-lg-3 col-form-label">
-                                            Password Lama</label>
-                                        <div class="col-md-8 col-lg-9">
-                                            <input name="pass_lama" type="password" class="form-control" required>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <label class="col-md-4 col-lg-3 col-form-label">
-                                            Password Baru</label>
-                                        <div class="col-md-8 col-lg-9">
-                                            <input name="pass_baru" type="password" class="form-control" required>
-                                        </div>
-                                    </div>
-                                    <div class="text-center d-flex justify-content-end">
-                                        <button type="submit" class="btn btn-primary">Ganti Password</button>
-                                    </div>
-                                </form><!-- End Change Password Form -->
                             </div>
                         </div><!-- End Bordered Tabs -->
                     </div>

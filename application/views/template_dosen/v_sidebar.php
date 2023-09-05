@@ -20,7 +20,7 @@
          <li class="nav-item">
              <a class="nav-link collapsed" href=<?= base_url('portal_dosen/keluar')?>>
                  <i class="bi bi-x-circle"></i>
-                 <span>Logout</span>
+                 <span>Log Out</span>
              </a>
          </li><!-- End F.A.Q Page Nav -->
 

@@ -58,11 +58,6 @@
                                     Profile</button>
                             </li>
 
-                            <li class="nav-item">
-                                <button class="nav-link" data-bs-toggle="tab"
-                                    data-bs-target="#profile-change-password">Edit Password</button>
-                            </li>
-
                         </ul>
                         <div class="tab-content pt-2">
 

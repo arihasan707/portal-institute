@@ -63,7 +63,7 @@
                             <input class="form-control" type="text" name="username" placeholder="Username" required>
                             <input class="form-control" type="password" name="pass" placeholder="Password" required>
                             <div class="form-button">
-                                <button type="submit" class="ibtn submit">Login</button>
+                                <button type="submit" class="ibtn submit w-100">Login</button>
                             </div>
                         </form>
                         <div class="other-links">

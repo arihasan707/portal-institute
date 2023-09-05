@@ -30,19 +30,21 @@ $(() => {
     const url = location.origin + '/' + path[1] + '/' + path[2];
     $('li.nav-item ul#akses-login li a').each(function() {
         if ($(this).attr('href').indexOf(url) !== -1) {
-            $(this).removeClass('collapsed').parent().parent().removeClass('collapse').parent()
+            $(this).removeClass('collapsed').addClass('active').parent().parent().removeClass(
+                    'collapse').parent()
                 .children().removeClass('collapsed');
         }
     });
     $('li.nav-item ul#perkuliahan li a').each(function() {
         if ($(this).attr('href').indexOf(url) !== -1) {
-            $(this).removeClass('collapsed').parent().parent().removeClass('collapse').parent()
+            $(this).removeClass('collapsed').addClass('active').parent().parent().removeClass(
+                    'collapse').parent()
                 .children().removeClass('collapsed');
         }
     });
     $('li a.dashboard').each(function() {
         if (this.href == href) {
-            $(this).removeClass('collapsed');
+            $(this).removeClass('collapsed').addClass('active');
         }
     });
 })

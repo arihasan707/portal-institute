@@ -17,8 +17,9 @@
              </a>
          </li><!-- End Profile Page Nav -->
 
-         <li class="nav-item">
-             <a class="nav-link collapsed" href="<?= base_url('portal_mahasiswa/khs')?>">
+         <li class="nav-item" id="khs">
+             <a class="nav-link collapsed" data="<?= base_url('portal_mahasiswa/khs/cari')?>"
+                 href="<?= base_url('portal_mahasiswa/khs')?>">
                  <i class="bi bi-receipt"></i>
                  <span>Kartu Hasil Studi</span>
              </a>

@@ -101,14 +101,12 @@ if (flashLogin) {
  <script>
 $(() => {
     const path = window.location.href;
-    const path1 = "https://dh-institute.daarulhuffadz.com/portal_mahasiswa/cari";
+
     $('ul li a').each(function() {
         if (this.href == path) {
             $(this).removeClass('collapsed');
         }
-        if (this.href == path1) {
-            $(this).removeClass('collapsed');
-        }
+
     })
 })
  </script>

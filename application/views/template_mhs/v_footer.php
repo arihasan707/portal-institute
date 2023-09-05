@@ -104,7 +104,7 @@ $(() => {
 
     $('ul li a').each(function() {
         if (this.href == path) {
-            $(this).removeClass('collapsed').addClass('active');
+            $(this).removeClass('collapsed');
         }
 
     })

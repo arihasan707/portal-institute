@@ -44,7 +44,7 @@ $(() => {
     });
     $('li a.dashboard').each(function() {
         if (this.href == href) {
-            $(this).removeClass('collapsed').addClass('active');
+            $(this).removeClass('collapsed');
         }
     });
 })

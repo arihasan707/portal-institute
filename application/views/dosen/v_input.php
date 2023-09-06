@@ -17,7 +17,7 @@
                     <div class="card-body">
                         <form action="<?php echo base_url('portal_dosen/tambah_nilai') ?>" method="post">
                             <div class="mb-2">
-                                <label class="form-label bold">Nik</label>
+                                <label class="form-label bold">Nim</label>
                                 <input type="hidden" name="id" value="<?= $k->id ?>">
                                 <input type="text" value="<?= $k->username ?>" class="form-control" disabled>
                             </div>
